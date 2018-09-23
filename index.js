@@ -1,5 +1,8 @@
-var canvasID = document.getElementById("Canvas");
-var canvas = canvasID.getContext("2d");
+const canvasID = document.getElementById("Canvas");
+canvasID.width = document.body.clientWidth;
+canvasID.height = document.body.clientHeight;
+const canvas = canvasID.getContext("2d");
+
 
 //------------------
 function Buffon() {
