@@ -206,7 +206,7 @@ function Buffon() {
         if (dropClock % Math.floor(fallRate) == 0) {
             if (currentNeedle < MAX_NEEDLES) {
                 dropClock = 0;
-                this.dropNeedles(1);
+//                 this.dropNeedles(1);
             }
         }
 
