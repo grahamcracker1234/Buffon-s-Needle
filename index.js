@@ -109,14 +109,14 @@ function Buffon() {
     window.NEEDLE_LENGTH = 1.0;
     const MILLISECONDS_PER_UPDATE = 5;
     const NUM_FLOOR_LINES = 5.0;
-    const MAX_NEEDLES = 10000;
+    const MAX_NEEDLES = 100000;
     const MAX_NEEDLE_AGE = 300;
     const FLOOR_FRICTION = 0.2;
-    const FLOOR_SIZE = NEEDLE_LENGTH * (NUM_FLOOR_LINES + 1) * 2;
+    const FLOOR_SIZE = NEEDLE_LENGTH * (NUM_FLOOR_LINES) * 2;
     const FLOOR_LEVEL = 0.0;
     const DROP_HEIGHT = 20;
     const DROP_JITTER = 0.15;
-    const DROP_RANGE = FLOOR_SIZE * 0.5;
+    const DROP_RANGE = FLOOR_SIZE * 0.75;
     const AIR_FRICTION = 0.02;
     const GRAVITY = 0.008;
     const BOUNCE = 0.9;
@@ -457,11 +457,11 @@ function Buffon() {
             floor.lineBack[l] = new Vector3D();
             floor.lineFront[l] = new Vector3D();
 
-            floor.lineBack[l].x = -h + width * (1 + l);
+            floor.lineBack[l].x = -h + width * l;
             floor.lineBack[l].y = FLOOR_LEVEL;
             floor.lineBack[l].z = -h;
 
-            floor.lineFront[l].x = -h + width * (1 + l);
+            floor.lineFront[l].x = -h + width * l;
             floor.lineFront[l].y = FLOOR_LEVEL;
             floor.lineFront[l].z = h;
 
@@ -499,11 +499,11 @@ function Buffon() {
             floor.lineBack[l] = new Vector3D();
             floor.lineFront[l] = new Vector3D();
 
-            floor.lineBack[l].x = -h + width * (1 + l);
+            floor.lineBack[l].x = -h + width * l;
             floor.lineBack[l].y = FLOOR_LEVEL;
             floor.lineBack[l].z = -h;
 
-            floor.lineFront[l].x = -h + width * (1 + l);
+            floor.lineFront[l].x = -h + width * l;
             floor.lineFront[l].y = FLOOR_LEVEL;
             floor.lineFront[l].z = h;
 
