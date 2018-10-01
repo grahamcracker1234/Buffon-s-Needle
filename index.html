@@ -28,6 +28,14 @@
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             }
 
+            #submit {
+                color: black;
+            }
+
+            #submit:hover {
+                color: white;
+            }
+
             .menu-inputs {
                 border-radius: 0.75em;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -36,6 +44,7 @@
                 border: none;
                 font-weight: bold;
                 font-size: 1em;
+                color: black;
             }
 
             .menu-text {
@@ -50,11 +59,11 @@
     <body onload="loadedPage();" onresize="resizeCanvas()">
         <div id="menu">
             <input class="menu-inputs" type="text" placeholder="Amount of needles to drop"></input>
-            <input class="menu-inputs" type="submit" value="Submit" onclick="submitForm();"></input>
+            <input id="submit" class="menu-inputs" type="submit" value="Submit" onclick="submitForm();"></input>
             <br>
             <span class="menu-text">Total Needles: <span id="total-needles"></span></span>
             <span class="menu-text">Crossing Needles: <span id="crossed-needles"></span></span>
-            <span class="menu-text">Result: <span id="results"></span></span>
+            <span class="menu-text">Approximation: <span id="results"></span></span>
             <span class="menu-text">Percent Error: <span id="percent-error"></span>%</span>
         </div>
         <canvas id="canvas">This text is displayed if your browser does not support HTML5 Canvas.</canvas>
